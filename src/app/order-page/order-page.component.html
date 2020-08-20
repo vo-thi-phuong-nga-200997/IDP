@@ -8,29 +8,20 @@
     <span class="font-weight-bold">Order details</span>
 </div>
 <div class="order-details">
+    <!-- My order -->
     <div class="pt-3">
         <div class="frame">
             <div class="title">
                 My order
             </div>
             <div class="content">
-                <div class="row">
-                    <div class="col-8">
-                        2 x LIF KUN Malt Drink
+                <div class="row" *ngFor="let item of itemOrder; let i= index">
+                    <div class="col-8 product-name">
+                        <span>{{item.quantity}}</span> x <span class="">{{item.name}}</span>
                     </div>
                     <div class="col-4">
                         <span class="float-right">
-                            20.000đ
-                        </span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-8">
-                        4 x BaVi 100% Fresh Milk
-                    </div>
-                    <div class="col-4 ">
-                        <span class="float-right">
-                            40.000đ
+                            {{ (item.quantity * item.price)| currency:'VND':'symbol':'3.':'fr' }}
                         </span>
                     </div>
                 </div>
@@ -39,14 +30,13 @@
                         Total money
                     </span>
                     <span class="float-right">
-                        60.000đ
+                        {{totalPrice | currency:'VND':'symbol':'3.':'fr' }}
                     </span>
                 </div>
             </div>
         </div>
-
-
     </div>
+    <!-- Contact info -->
     <div class="pt-3">
         <div class="frame">
             <div class="title">

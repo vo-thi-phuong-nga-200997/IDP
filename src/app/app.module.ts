@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -38,7 +38,12 @@ import { NgbModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
     NgbModule,
     NgbAlertModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LOCALE_ID,
+      useValue: 'VND',
+     }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -61,3 +61,11 @@
     outline: none !important;
     box-shadow: none !important;
 }
+
+.product-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    cursor: pointer;
+}
