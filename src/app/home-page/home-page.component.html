@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <div class="row header">
+        <div class="col-12">
+            <div class="tophead">
+                <img class="logo" src="../../assets/image/logo.png">
+                <div class="d-flex align-items-center">
+                    <app-input-search></app-input-search>
+                    <!-- <img style="height: 1.3rem" class="icon mr-3" src="../../assets/image/search.png"> -->
+                    <div class="position-relative">
+                        <img class="icon" src="../../assets/image/shopping-cart.png">
+                        <strong *ngIf="orderQuantity > 0" class="quantity-order">{{orderQuantity}}</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="frame-brand  mt-3">
+                <img class="brand" src="../../assets/image/brand/LIF.png" (click)="setItem(0)">
+                <img class="brand" src="../../assets/image/brand/KUN.png" (click)="setItem(1)">
+                <img class="brand" src="../../assets/image/brand/BAVI.png" (click)="setItem(2)">
+                <img class="brand" src="../../assets/image/brand/MEN.png" (click)="setItem(3)">
+            </div>
+        </div>
+    </div>
+    <app-frame-item *ngFor="let item of item.item; let i= index">
+        <img class="product-img" img [src]="item.img">
+        <div content>
+            <div class="product-name" content>{{item.name}}</div>
+            <div class="product-title">{{item.sale}}</div>
+        </div>
+        <app-input-quantity [quantity]="item.quantity" quantity (flag)="order($event)" (focusOut)="quantity($event, i)"></app-input-quantity>
+    </app-frame-item>
+</div>
+<div class="frame-order">
+    <button *ngIf="orderQuantity > 0" type="button" class="order-button animation-up" (click)="placeOrder()"> Place order </button>
+</div>

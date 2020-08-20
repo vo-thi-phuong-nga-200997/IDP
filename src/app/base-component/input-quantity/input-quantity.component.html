@@ -1,0 +1,9 @@
+<div class="d-flex">
+    <button (click)="minus()" *ngIf="quantity > 0" class="button-choose">
+            <span class="material-icons">remove</span>
+    </button>
+    <input *ngIf="quantity > 0" readonly class="input-quantity" type="number" [(ngModel)]="quantity" name="quantity" id="quantity">
+    <button (click)="plus()" class="button-choose">
+            <span class="material-icons">add</span>
+    </button>
+</div>

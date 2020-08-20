@@ -1,0 +1,27 @@
+.container {
+    min-height: 100vh;
+    background: #00b7ff2e;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+}
+
+.success {
+    margin-top: 50%;
+}
+
+.img-noti {
+    height: 4rem;
+}
+
+.title-noti {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    color: #04A523;
+    font-weight: 600;
+}
+
+.time-noti {
+    margin: 2rem 0rem;
+    font-weight: 600;
+}

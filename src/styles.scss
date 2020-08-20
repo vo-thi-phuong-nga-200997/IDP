@@ -1,1 +1,95 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import "node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+@import "node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+:host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    html {
+        font-size: 87.5%;
+    }
+}
+
+.product-name {
+    font-size: 1rem
+}
+
+.product-title {
+    font-size: 0.85rem;
+    color: #D44333
+}
+
+.animation {
+    animation: animation 0.8s;
+}
+
+@keyframes animation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.frame-order {
+    position: fixed;
+    bottom: 0rem;
+    background: white;
+    width: 100%;
+    padding: 0.5rem 0rem;
+    transition: 0.4s;
+}
+
+.order-button {
+    background: #07aced;
+    height: 2.5rem;
+    border: none;
+    border-radius: 5px;
+    width: 90%;
+    color: #fff;
+    margin-left: 5%;
+    transition: 0.4s;
+    translate: 1s;
+}
+
+.order-button:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+
+/* Importing Bootstrap SCSS file. */
+
+@import '~bootstrap/scss/bootstrap';
+.alert {
+    z-index: 10;
+    position: fixed;
+    top: 1rem;
+    width: 20rem;
+    right: 0rem;
+    animation: animation 0.5s;
+}
+
+@keyframes animation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

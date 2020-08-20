@@ -1,0 +1,34 @@
+.button-choose {
+    color: white;
+    background-color: #07aced;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 0.3rem;
+    justify-content: center;
+    .material-icons {
+        font-size: 0.9rem !important;
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 375px) {
+    .material-icons {
+        font-weight: 500 !important;
+    }
+}
+
+.input-quantity {
+    background: none;
+    color: #07aced;
+    border: none;
+    height: 1.3rem;
+    max-width: 3rem;
+    text-align: center;
+}
+
+.input-quantity:focus {
+    outline: none;
+}

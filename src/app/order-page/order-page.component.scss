@@ -1,0 +1,63 @@
+.header {
+    height: 3rem;
+    color: #073142;
+    font-weight: 500;
+    font-size: 1.2rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.back {
+    position: absolute;
+    left: 1rem;
+    top: 0.8rem;
+}
+
+.order-details {
+    background: #00b7ff2e;
+    min-height: 100vh;
+}
+
+.frame {
+    background: #fff;
+    padding: 0rem 1rem;
+}
+
+.title {
+    height: 1.5rem;
+    height: 2.5rem;
+    align-items: center;
+    display: flex;
+    border-bottom: 1px solid #F2F2F2;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #073142;
+}
+
+.content {
+    padding-bottom: 1rem;
+}
+
+.total-money {
+    font-weight: bold;
+    border-top: 1px solid #F2F2F2;
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+}
+
+.input-info {
+    background-color: none;
+    border: none;
+    border-bottom: 1px solid #F2F2F2;
+}
+
+.input-info::placeholder {
+    color: #25252547;
+}
+
+.input-info:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}

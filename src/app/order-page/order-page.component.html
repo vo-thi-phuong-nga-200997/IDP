@@ -1,0 +1,75 @@
+<p>
+    <ngb-alert *ngIf="successMessage" type="danger" (close)="successMessage = ''">{{ successMessage }}</ngb-alert>
+</p>
+<div class="header">
+    <div class="back" (click)="backClicked()">
+        <span class="material-icons">
+                        keyboard_arrow_left
+                        </span>
+    </div>
+    <span class="font-weight-bold">Order details</span>
+</div>
+<div class="order-details">
+    <div class="pt-3">
+        <div class="frame">
+            <div class="title">
+                My order
+            </div>
+            <div class="content">
+                <div class="row">
+                    <div class="col-8">
+                        2 x LIF KUN Malt Drink
+                    </div>
+                    <div class="col-4">
+                        <span class="float-right">
+                            20.000đ
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-8">
+                        4 x BaVi 100% Fresh Milk
+                    </div>
+                    <div class="col-4 ">
+                        <span class="float-right">
+                            40.000đ
+                        </span>
+                    </div>
+                </div>
+                <div class="total-money">
+                    <span>
+                        Total money
+                    </span>
+                    <span class="float-right">
+                        60.000đ
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="pt-3">
+        <div class="frame">
+            <div class="title">
+                Contact info
+            </div>
+            <div class="content">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control input-info" [(ngModel)]="username" placeholder="Username" name="username">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-control input-info" [(ngModel)]="phone" placeholder="Phone" name="phone">
+                    </div>
+                    <div class="form-group ">
+                        <input type="text" class="form-control input-info" [(ngModel)]="address" placeholder="Address" name="address">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="frame-order">
+    <button type="button" class="order-button" (click)="order()">Order</button>
+</div>
