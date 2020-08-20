@@ -4,7 +4,7 @@
             <div class="tophead">
                 <img class="logo" src="../../assets/image/logo.png">
                 <div class="d-flex align-items-center">
-                    <app-input-search></app-input-search>
+                    <app-input-search (focusOut)="searchItem($event)"></app-input-search>
                     <!-- <img style="height: 1.3rem" class="icon mr-3" src="../../assets/image/search.png"> -->
                     <div class="position-relative">
                         <img class="icon" src="../../assets/image/shopping-cart.png">
@@ -20,7 +20,7 @@
             </div>
         </div>
     </div>
-    <app-frame-item *ngFor="let item of item.item; let i= index">
+    <app-frame-item *ngFor="let item of item; let i= index">
         <img class="product-img" img [src]="item.img">
         <div content>
             <div class="product-name" content>{{item.name}}</div>
