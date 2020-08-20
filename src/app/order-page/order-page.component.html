@@ -1,6 +1,4 @@
-<p>
-    <ngb-alert *ngIf="successMessage" type="danger" (close)="successMessage = ''">{{ successMessage }}</ngb-alert>
-</p>
+<ngb-alert *ngIf="successMessage" type="danger" (close)="successMessage = ''">{{ successMessage }}</ngb-alert>
 <div class="header">
     <div class="back" (click)="backClicked()">
         <span class="material-icons">
@@ -55,15 +53,32 @@
                 Contact info
             </div>
             <div class="content">
-                <form>
+                <form [formGroup]="registerForm">
                     <div class="form-group">
-                        <input type="text" class="form-control input-info" [(ngModel)]="username" placeholder="Username" name="username">
+                        <input type="text" formControlName="username" class="form-control input-info" nbInput [ngClass]="{ 'is-invalid':(f.username.touched && f.username.errors ) }" [(ngModel)]="username" placeholder="Username" name="username">
+                        <div class="required">
+                            <div *ngIf="submitted && f['username'].errors">
+                                <div class="float-right" *ngIf="f['username'].errors.required">Username is required</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <input type="tel" class="form-control input-info" [(ngModel)]="phone" placeholder="Phone" name="phone">
+                        <input type="tel" formControlName="phone" [(ngModel)]="phone" placeholder="Phone" name="phone" [ngClass]="{ 'is-invalid': (f.phone.touched && f.phone.errors )}" nbInput class="form-control input-info">
+                        <div class="required">
+                            <div *ngIf="f['phone'].invalid && ((f['phone'].dirty || f['phone'].touched || f['phone'].errors ))">
+                                <div class="float-right" *ngIf="submitted && f['phone'].errors.required">Phone is required</div>
+                                <div class="float-right" *ngIf="f['phone'].errors.pattern">Incorrect telephone number</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group ">
-                        <input type="text" class="form-control input-info" [(ngModel)]="address" placeholder="Address" name="address">
+
+                    <div class="form-group">
+                        <input type="text" formControlName="address" class="form-control input-info" nbInput [ngClass]="{ 'is-invalid':(f.address.touched && f.address.errors ) }" [(ngModel)]="address" placeholder="Address" name="address">
+                        <div class="required">
+                            <div *ngIf="submitted && f['address'].errors">
+                                <div class="float-right" *ngIf="f['address'].errors.required">Address is required</div>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
