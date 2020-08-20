@@ -1,0 +1,71 @@
+.product-img {
+    height: 100%;
+}
+
+.logo {
+    height: 3rem;
+}
+
+.icon {
+    height: 1.5rem;
+}
+
+.tophead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 0.5rem;
+}
+
+.header {
+    background: #00b7ff2e;
+    border-bottom-right-radius: 15%;
+    border-bottom-left-radius: 15%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.frame-brand {
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+.brand {
+    height: 3.5rem;
+    margin: 0.5rem
+}
+
+.quantity-order {
+    position: absolute;
+    right: rem;
+    bottom: 0.5rem;
+    left: 1rem;
+    background: red;
+    height: 1.2rem;
+    width: 1.2rem;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    color: #fff;
+}
+
+.animation-up {
+    animation: mymove 0.5s;
+}
+
+@keyframes mymove {
+    from {
+        transform: translateY(10%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

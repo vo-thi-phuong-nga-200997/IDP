@@ -65,13 +65,11 @@ export class OrderPageComponent implements OnInit {
   order(){
     this.submitted = true;
     if (this.registerForm.invalid) {
+        this._success.next(`Please complete all information!`);
         return;
     }
     if(this.username && this.phone && this.address){
       this.router.navigate([`/notification-page`]);
     }
-    if(!this.username || !this.phone || !this.address){
-      this._success.next(`Please complete all information!`);
-      }
   }
 }

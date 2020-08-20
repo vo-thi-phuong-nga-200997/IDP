@@ -13,6 +13,7 @@ import { InputSearchComponent } from './base-component/input-search/input-search
 import { OrderPageComponent } from './order-page/order-page.component';
 import { NotificationPageComponent } from './notification-page/notification-page.component';
 import { NgbModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
+import { SearchPageComponent } from './search-page/search-page.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { NgbModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
     InputSearchComponent,
     OrderPageComponent,
     NotificationPageComponent,
+    SearchPageComponent,
   ],
   exports: [
     InputQuantityComponent,

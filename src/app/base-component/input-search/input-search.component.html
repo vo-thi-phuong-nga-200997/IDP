@@ -1,5 +1,5 @@
-<div class="searchBox" [ngClass]="{'open': dataSearch}">
-    <input class="searchInput" [ngClass]="{'open' : dataSearch}" type="search" name="" placeholder="Search..." (keydown.enter)='$event.target.blur()' (focusout)="onFocusOut()" [(ngModel)]='dataSearch'>
+<div class="searchBox">
+    <input class="searchInput" type="search" name="" placeholder="Search..." (keydown.enter)='$event.target.blur()' (focusout)="onFocusOut()" [(ngModel)]='dataSearch'>
     <button class="searchButton">
         <img style="height: 1.3rem" class="icon mr-3" src="../../assets/image/search.png">
     </button>

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
 import { OrderPageComponent } from './order-page/order-page.component';
 import { NotificationPageComponent } from './notification-page/notification-page.component';
+import { SearchPageComponent } from './search-page/search-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home-page', pathMatch: 'full' },
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'notification-page',
     component: NotificationPageComponent
+  },
+  {
+    path: 'search-page',
+    component: SearchPageComponent
   },
 ];
 

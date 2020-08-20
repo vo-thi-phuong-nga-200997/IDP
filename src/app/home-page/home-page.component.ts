@@ -196,24 +196,11 @@ export class HomePageComponent implements OnInit {
       }) 
     })
   }
-  searchItem(name: string){
-    let dataSearch = [];
-    this.item = [];
-    if(name){
-      this.brand.map(data=>{
-        dataSearch = data.item.filter(item => (this.stringToSlug(item.name).indexOf(this.stringToSlug(name)) !== -1));
-        if(dataSearch.length > 0){
-            dataSearch.map(item => {
-            this.item.push({
-              ...item,
-              idBrand: data.id
-            })
-          })
-        }
-      })
-    }else{
-      this.setDefaulItem()
-    }
+  searchItem(){
+    localStorage.setItem('brand', JSON.stringify(this.brand));
+    localStorage.setItem('orderQuantity', JSON.stringify(this.orderQuantity));
+    localStorage.setItem('orderItem', JSON.stringify(this.itemOrder))
+    this.router.navigate([`/search-page`]);
   }
   placeOrder(){
     localStorage.setItem('brand', JSON.stringify(this.brand));
